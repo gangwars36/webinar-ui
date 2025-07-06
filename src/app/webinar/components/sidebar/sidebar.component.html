@@ -1,0 +1,56 @@
+<div class="bg-white px-3 rounded shadow-sm sidebar-container pb-2">
+  <!-- 🔹 Specialty -->
+  <div class="mb-3">
+    <div class="d-flex justify-content-between align-items-center mb-2"
+         (click)="toggleSection('specialties')" role="button">
+      <strong>Specialty</strong>
+      <i class="bi" [ngClass]="sectionState['specialties'] ? 'bi-chevron-up' : 'bi-chevron-down'"></i>
+    </div>
+
+    <div *ngIf="sectionState['specialties']">
+      <input type="text" class="form-control mb-2" placeholder="Search" />
+      <div class="form-check mb-1" *ngFor="let specialty of specialties">
+        <input type="checkbox" class="form-check-input" [id]="specialty" />
+        <label class="form-check-label" [for]="specialty">{{ specialty }}</label>
+      </div>
+    </div>
+  </div>
+
+  <hr />
+
+  <!-- 🔹 Topics -->
+  <div class="mb-3">
+    <div class="d-flex justify-content-between align-items-center mb-2"
+         (click)="toggleSection('topics')" role="button">
+      <strong>Topics</strong>
+      <i class="bi" [ngClass]="sectionState['topics'] ? 'bi-chevron-up' : 'bi-chevron-down'"></i>
+    </div>
+    <div *ngIf="sectionState['topics']">
+      <p class="text-muted small">Topic filters go here...</p>
+    </div>
+  </div>
+
+  <!-- 🔹 Speakers -->
+  <div class="mb-3">
+    <div class="d-flex justify-content-between align-items-center mb-2"
+         (click)="toggleSection('speakers')" role="button">
+      <strong>Speakers</strong>
+      <i class="bi" [ngClass]="sectionState['speakers'] ? 'bi-chevron-up' : 'bi-chevron-down'"></i>
+    </div>
+    <div *ngIf="sectionState['speakers']">
+      <p class="text-muted small">Speaker filters go here...</p>
+    </div>
+  </div>
+
+  <!-- 🔹 Pharma & associations -->
+  <div class="mb-3">
+    <div class="d-flex justify-content-between align-items-center mb-2"
+         (click)="toggleSection('pharma')" role="button">
+      <strong>Pharma & associations</strong>
+      <i class="bi" [ngClass]="sectionState['pharma'] ? 'bi-chevron-up' : 'bi-chevron-down'"></i>
+    </div>
+    <div *ngIf="sectionState['pharma']">
+      <p class="text-muted small">Pharma filters go here...</p>
+    </div>
+  </div>
+</div>

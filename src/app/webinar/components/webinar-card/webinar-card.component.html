@@ -1,0 +1,66 @@
+<div class="card border rounded shadow-sm h-100">
+  <!-- Header -->
+  <div class="p-3 d-flex justify-content-between align-items-start flex-wrap">
+    <div class="d-flex align-items-start gap-2 flex-grow-1">
+      <img src="assets/images/org-logo.png" width="30" height="30" alt="logo" class="rounded-circle">
+      <div>
+        <div class="fw-bold">{{ webinar.organization }}</div>
+        <div class="text-muted small">Sponsored by {{ webinar.sponsoredBy }}</div>
+        <div class="text-muted small">{{ webinar.followers }} followers • {{ webinar.timeAgo }}</div>
+      </div>
+    </div>
+    <div class="d-flex mt-2 mt-md-0 justify-content-between align-items-center gap-2">
+      <span class="text-primary fw-semibold small">+ Follow</span>
+      <span><i class="bi bi-three-dots-vertical"></i></span>
+    </div>
+  </div>
+
+  <!-- Image Banner with Credits -->
+  <div class="card mx-3">
+    <img [src]="webinar.imageUrl" class="img-fluid w-100 rounded-2" alt="Webinar banner">
+
+    <!-- Credits Ribbon -->
+    <div class="px-3 pt-2">
+      <div class="badge text-dark border px-2 d-inline-flex align-items-center" style="background-color: #fcebd8;">
+        <img src="assets/images/icons_star.png" width="16" height="16" alt="star" class="me-1"> 
+        {{ webinar.credits }} Credits <span class="text-muted fw-semibold">({{ webinar.creditsExpiry }})</span>
+      </div>
+    </div>
+
+    <!-- Title -->
+    <div class="px-3 pt-2">
+      <h6 class="fw-bold">{{ webinar.title }}</h6>
+    </div>
+
+    <!-- Goes Live Box -->
+    <div class="d-flex flex-column flex-md-row justify-content-between bg-info-subtle px-3 py-2 mt-2 rounded-bottom">
+      <div class="fw-semibold text-dark mb-2 mb-md-0">
+        <span class="text-secondary">Goes live on</span><br><span class="fw-bold">{{ webinar.liveDate }}</span>
+      </div>
+      <button class="btn my-2 btn-dark btn-sm">Ask a question</button>
+    </div>
+  </div>
+
+  <!-- Key Highlights -->
+  <div class="card mx-3 my-3 border-top border-warning-subtle px-3 py-2" style="background-color: #f4ede8;">
+    <div class="text-uppercase small text-muted">Key Highlights</div>
+    <div class="text-dark small">{{ webinar.highlights }}</div>
+  </div>
+
+  <!-- Reactions -->
+  <div class="px-3 py-2 border-top d-flex flex-column flex-md-row justify-content-between text-muted small">
+    <div class="d-flex gap-2 fw-medium">
+      <div>{{ webinar.likes }} Likes</div>•
+      <div>{{ webinar.comments }} Comments</div>
+    </div>
+    <div class="mt-1 mt-md-0">{{ webinar.watchers }} Watching</div>
+  </div>
+
+  <!-- Action Icons -->
+  <div class="px-3 pt-1 pb-1 d-flex justify-content-around border-top text-center fw-semibold text-secondary-emphasis">
+    <div><i class="bi bi-hand-thumbs-up"></i><br><small>Like</small></div>
+    <div><i class="bi bi-chat-dots"></i><br><small>Comment</small></div>
+    <div><i class="bi bi-arrow-repeat"></i><br><small>Repost</small></div>
+    <div><i class="bi bi-share-fill"></i><br><small>Share</small></div>
+  </div>
+</div>

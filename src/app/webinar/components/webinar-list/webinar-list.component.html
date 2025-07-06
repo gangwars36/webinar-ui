@@ -1,0 +1,38 @@
+<div class="container mt-3">
+  <!-- 🧠 Heading + Tabs Row -->
+  <div class="row align-items-center mb-3">
+    <div class="col-12">
+      <h4 class="m-0">Webinar</h4>
+    </div>
+    <div class="col-12 text-md-end mt-2 mt-md-0">
+      <app-tabs (tabChange)="onTabChange($event)"></app-tabs>
+    </div>
+  </div>
+
+  <!-- 📦 Main Content Grid -->
+  <div class="row">
+    <!-- Sidebar Filters -->
+    <div class="col-12 col-md-3 mb-3 mb-md-0">
+      <app-sidebar></app-sidebar>
+    </div>
+
+    <!-- Webinar Cards Section -->
+    <div class="col-12 col-md-9">
+      <!-- Registered webinars -->
+      <h6 class="fw-semibold mb-3">Registered webinars</h6>
+      <div class="row">
+        <div class="col-12 col-sm-6 mb-4" *ngFor="let webinar of registeredWebinars">
+          <app-webinar-card [webinar]="webinar"></app-webinar-card>
+        </div>
+      </div>
+
+      <!-- Goes live next week webinars -->
+      <h6 class="fw-semibold mt-4 mb-3">Goes live next week</h6>
+      <div class="row">
+        <div class="col-12 col-sm-6 mb-4" *ngFor="let webinar of nextWeekWebinars">
+          <app-webinar-card [webinar]="webinar"></app-webinar-card>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,22 @@
+.sidebar-container {
+  min-width: 175px;
+
+  @media (max-width: 767px) {
+    padding: 1rem;
+    border-radius: 0;
+    box-shadow: none;
+    background-color: transparent;
+  }
+
+  .form-check-label {
+    font-size: 14px;
+  }
+
+  input.form-control {
+    font-size: 14px;
+  }
+
+  .bi {
+    font-size: 16px;
+  }
+}

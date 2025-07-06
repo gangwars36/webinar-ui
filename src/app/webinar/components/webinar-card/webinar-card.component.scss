@@ -1,0 +1,58 @@
+// Default style
+.badge {
+  font-size: 13px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+// Tablet-specific fix
+@media (max-width: 991.98px) {
+  .badge {
+    font-size: 12px;
+    flex-wrap: wrap;
+    line-height: 1.4;
+    padding: 4px 6px;
+  }
+
+  .badge img {
+    width: 14px;
+    height: 14px;
+  }
+
+  .card h6 {
+    font-size: 1rem;
+  }
+
+  .btn-sm {
+    font-size: 13px;
+    padding: 4px 12px;
+  }
+}
+
+@media (max-width: 576px) {
+  h6 {
+    font-size: 1rem;
+  }
+
+  .badge {
+    font-size: 13px;
+  }
+
+  .card img {
+    object-fit: cover;
+  }
+
+  .btn-sm {
+    width: 100%;
+  }
+
+  .text-muted,
+  .text-dark {
+    font-size: 13px;
+  }
+
+  .text-center small {
+    font-size: 12px;
+  }
+}
